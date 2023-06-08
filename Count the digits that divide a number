@@ -1,0 +1,14 @@
+class Solution {
+    public int countDigits(int num) {
+        int numCopy = num;
+        int counter = 0;
+        while(numCopy !=0){
+            int digit = numCopy % 10;
+            if(num % digit == 0){
+                counter++;
+            }
+            numCopy /= 10;
+        }
+        return counter;
+    }
+}
